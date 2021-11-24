@@ -1,6 +1,9 @@
 <template>
 <div id="page">
     <div id="container">
+        <h1>
+            Content Goes Here 
+        </h1>
     </div>
 </div>
 </template>
@@ -19,5 +22,6 @@ export default {
 #container {
     width: 70%;
     margin: auto;
+    color: white;
 }
 </style>
