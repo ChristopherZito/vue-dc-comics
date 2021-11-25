@@ -2,16 +2,14 @@
   <div id="foot-page">
         <!-- shop -->
         <div id="shop">
-            <!-- <section>
-                <ul>
-                    <li v-for="product,i in shopSection" :key="i">
-                        <img :src="require(`./assets/img/${product.img}`)" :alt="product.text">
+            <section>
+                    <div v-for="product,i in shopSection" :key="i">
+                        <img :src="require(`../assets/img/${product.img}`)" :alt="product.text">
                         <h3>
                             {{product.text}}
                         </h3>
-                    </li>
-                </ul>
-            </section> -->
+                    </div>
+            </section>
         </div>
         <!-- footer links -->
         <div id="foot-link">
@@ -90,11 +88,10 @@
                   <h2>
                       FOLLOW US
                   </h2>
-                  <img src="../assets/img/footer-facebook.png" alt="">
-                  <img src="../assets/img/footer-periscope.png" alt="">
-                  <img src="../assets/img/footer-pinterest.png" alt="">
-                  <img src="../assets/img/footer-twitter.png" alt="">
-                  <img src="../assets/img/footer-youtube.png" alt="">
+                  <img v-for="social,i in socials" :key="i" 
+                  :src="require(`../assets/img/${social.text}`)"
+                  :alt="social.url">
+
 
               </div>
           </div>
@@ -243,6 +240,30 @@ export default {
                 url:"#"
             },
           ],
+
+          socials:[
+              {
+                  text:"footer-facebook.png",
+                  url:"facebook",
+              },
+              {
+                  text:"footer-periscope.png",
+                  url:"periscope",
+              },
+              {
+                  text:"footer-pinterest.png",
+                  url:"pinterest",
+              },
+              {
+                  text:"footer-twitter.png",
+                  url:"twitter",
+              },
+              {
+                  text:"footer-youtube.png",
+                  url:"youtube",
+              },
+              
+          ]
       }
   }
 }
@@ -255,6 +276,19 @@ export default {
 
     section {
         display: flex;
+        width: 70%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        /* debug */
+        /* height: 150px; */
+
+        div {
+            display: flex;
+            align-items: center;
+            width: calc((100% / 5) - 20px) ;
+            margin: 0 30px;
+        }
     }
 }
 #foot-link {
