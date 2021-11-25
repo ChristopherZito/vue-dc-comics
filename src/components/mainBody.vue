@@ -1,16 +1,20 @@
 <template>
 <div id="page">
     <div id="container">
-        <h1>
-            Content Goes Here 
-        </h1>
+        <SubMain/>
     </div>
 </div>
 </template>
 
 <script>
+import SubMain from '../components/SubMain.vue';
+
 export default {
   name: 'MainBody',
+  components: {
+      SubMain,
+  },
+  
 }
 </script>
 <style scoped lang="scss">
