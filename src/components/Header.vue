@@ -100,5 +100,7 @@ a {
 
 .selected {
   color: blue;
+  padding-bottom: 50px;
+  border-bottom: 5px solid blue;
 }
 </style>

@@ -271,8 +271,10 @@ export default {
 <style scoped lang="scss">
 #shop {
     background-color: rgb(0, 200, 255);
+    padding: 50px 0;
     /* debug */
-    height: 200px;
+    /* height: 200px; */
+    
 
     section {
         display: flex;
@@ -288,6 +290,12 @@ export default {
             align-items: center;
             width: calc((100% / 5) - 20px) ;
             margin: 0 30px;
+
+            img{
+                width: 100px;
+                height: 100px;
+                margin-right: 10px;
+            }
         }
     }
 }

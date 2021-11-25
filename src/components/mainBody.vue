@@ -3,12 +3,18 @@
     <div id="jumbo-TT">
         <!-- immagine TT -->
     </div>
+    
     <div id="container">
+        <div id="button-up">
+            <button>
+                CURRENT SERIES
+            </button>
+        </div>
         <SubMain 
         v-for="comic,i in comics" :key="i" 
         :dcBook="comic"/>
     </div>
-    <div id="button">
+    <div id="button-down">
         <button>
             LOAD MORE
         </button>
@@ -120,7 +126,7 @@ export default {
         height: 350px;
     }
 
-    #button{
+    #button-down{
         margin: auto;
         position: absolute;
         bottom: 20px;
@@ -135,6 +141,8 @@ export default {
             font-weight: bolder;
         }
     }
+
+    
 }
 #container {
     width: 70%;
@@ -142,5 +150,23 @@ export default {
     color: white;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    padding-top: 50px;
+
+    #button-up{
+        margin: auto;
+        position: absolute;
+        top: -40px;
+        left: 0;
+
+        button{
+            color: white;
+            background-color: blue;
+            border: none;
+            padding: 20px 50px;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+    }
 }
 </style>
